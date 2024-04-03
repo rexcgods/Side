@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6pFmSA8f7Tvmc4QVIzNZMy9HDgxP1ITEQdPYqCgFPPQMmMRuQsnxCPOE3&s=10');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            font-size: 24px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h1>Navigation</h1>
+    <button onclick="navigateToTelegram()">✈️</button>
+    <button onclick="navigateToYouTube()">❤️</button>
+
+    <script>
+        function navigateToTelegram() {
+            window.location.href = 'https://t.me/rexcgod';
+        }
+
+        function navigateToYouTube() {
+            window.location.href = 'https://www.youtube.com/@rexcgod';
+        }
+    </script>
+</body>
+</html>
