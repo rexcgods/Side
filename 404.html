@@ -15,29 +15,70 @@
         .galaxy {
             position: relative;
             height: 100%;
-            background: url('https://example.com/galaxy.jpg') no-repeat center center fixed;
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS6xqnSDfsZeGP1C32qVxZvGTwT3ew4pC5lQ&usqp=CAU') no-repeat center center fixed;
             background-size: cover;
+            background-attachment: fixed;
             color: white;
             text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            filter: brightness(70%); /* Mengurangi kecerahan gambar */
         }
 
         h1 {
             font-size: 36px;
             margin-bottom: 20px;
+            font-weight: 900; /* Nilai yang lebih tinggi membuat teks sangat tebal */
+            background: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000);
+            background-size: 400%;
+            animation: rainbow 5s infinite linear;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes rainbow {
+            0% {
+                background-position: 0%;
+            }
+            100% {
+                background-position: 400%;
+            }
         }
 
         p {
             font-size: 18px;
             margin-bottom: 20px;
+            font-weight: 900; /* Nilai yang lebih tinggi membuat teks sangat tebal */
         }
 
-        a {
-            color: #007bff;
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .social-links li:last-child {
+            margin-right: 0;
+        }
+
+        .social-links a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
             text-decoration: none;
+            transition: background-color 0.3s ease;
+            font-weight: 900; /* Nilai yang lebih tinggi membuat teks sangat tebal */
+        }
+
+        .social-links a:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
@@ -46,7 +87,7 @@
         <h1>404 - Halaman tidak ditemukan</h1>
         <p>Maaf, halaman yang Anda cari tidak ditemukan.</p>
         <p>Silakan kunjungi media sosial kami:</p>
-        <ul>
+        <ul class="social-links">
             <li><a href="https://YouTube.com/@rexcgods">YouTube</a></li>
             <li><a href="https://t.me/rexcgod">Telegram</a></li>
             <li><a href="https://instagram.com/rexcgods">Instagram</a></li>
