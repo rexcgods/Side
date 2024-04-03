@@ -5,17 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Link Collection</title>
     <style>
-        .emoji-link {
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 50px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
             text-decoration: none;
             color: blue;
         }
 
-        .emoji-link:hover {
+        a:hover {
             text-decoration: underline;
         }
 
-        .image-container {
-            filter: brightness(70%);
+        .emoji-link {
+            font-size: 24px;
+            margin: 10px;
         }
 
         .bold-text {
@@ -24,6 +49,8 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: animateGradient 10s linear infinite;
+            text-align: center;
+            margin-top: 30px;
         }
 
         @keyframes animateGradient {
@@ -41,11 +68,6 @@
     <p>Click emoji 🫀 to go to the link:</p>
     <a href="https://sfl.gl/B1RJ" class="emoji-link">🫀</a>
     <a href="https://sfl.gl/8RgCSVb" class="emoji-link">🫀</a>
-    <div class="image-container">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6pFmSA8f7Tvmc4QVIzNZMy9HDgxP1ITEQdPYqCgFPPQMmMRuQsnxCPOE3&s=10" alt="Redupkan Cahaya" width="500">
-    </div>
-    <p class="bold-text">Ini adalah teks yang diformat menjadi tebal (bold) dan memiliki gradient warna yang bergerak.</p>
-    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUTEhIVFhUWFRcVFhUYFRUVFhUYFxcWGBkWFRUYHSggGBonHhUVITEhJSkrLi8uFx8zODMtNygtLisBCgoKDg0OGxAQGy0lHyUtLS0tLi0tLS0tLS0tKy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAABBAMBAAAAAAAAAAAAAAAFAgMEBgABBwj/xABJEAABAwEEBgcFBQUGBAcAAAABAAIRAwQSITEFBkFRYXETIoGRobHBBzJC0fAUUnKS4SNiorLCJDNTgoPxQ3OT0hUXNFRjo8P/xAAbAQACAwEBAQAAAAAAAAAAAAACBAABAwUGB//EADERAAICAQQABQEGBgMAAAAAAAABAhEDBBIhMRMiMkFRcQUUM0KBoSMkYeHw8VJikf/aAAwDAQACEQMRAD8Aobmbp7c+UJTKQMzgMYjacwDwUynSc0gkEHMGMzmE1UgmTIO8fe9F7xM5e+xuizdOWcjZEynGNF1wJ2i7jhuJPYE/ZGtAOd4EXYgtxGMyotSkBmQZkcWwcyFCrtkaq6JbnyxCiPClVjuGzvUZwUNo9jZSHJZSHIGNKQlaWFJWbJYqVpaWShLsUk1MlkpQClWU2YBj2J1oTbfhT0K4lWbC3K0tErQA24psuWnFJJVNko2tErSxUEjS0UpaIUDNBKC0AtqFhzVF/wDaKfP0KvGuGnehs4Y09eo3tDIxPbl3rnWrtqaysxzjABxPYVF0/pZ1Z5cTngBuaMAPrivA63R+NrIzl1FfvZ6COeOPBfuK/wDE+CxA4KxOHO++5DoDXycd3E8MNyRWpYmMvrJTbPZ52RwI2Hapj7DgCMAQYLt4zIK9nvSZ5R5UmCBSjCNsnExByBTddjboHxSZM4Rsw2IpVeLhaBG85zGIxOKG2qzkY7Bt58FalYcJ2wXVCjvU2qxR3UzuRNj0WRXBTtFaCr2g/sqZI2vPVaP8xz5CSrFoHVcECpXGfu0zgOdTzu9+5X2ztDWgNGAAAjDlEei5Wp+0FDyw5Y7jxN8spmj/AGcz/fV8fu02yR/md/2qxWb2dWIDrNe7iahB/hhWSzNgDADgMlKa48O/9Fyp63NL8xuscV7FZ/8AL3R/+A//AK1T1emLT7MrE73TWpng4OHbea7zVzZO8d36p5jju7j80C1WZfmZNqORaX9ltdgLqFRtYZ3Y6N8bhJLXd45Kk2qxvpOLHtc1wwLXAgjmCvS7WNOWB4YHt39qDa0as0rZTioOsB1KoHXZwI+Ju8eWadwfaMk6ydfJlLF8Hnhvqn1M1g0PUstV1OoIIgg5hw2OadoKGsrArqwyx+exemOpBK2SklbWShAAKUlIyFAwlHlHJGFOk8n4E8f1uTwfdq7Ptms+6b8XVt+ffU76BTHzVsH/U28T9tef1+lMAj3j9NT7l0yZ7W6/7zSf7vr/AEVwzDvPOT6tj9pXie+d/qw9+M0gC25F0e7Lc6SeQ2TigYzTnjt8d3FbDpyDvfeo1TQ8mdjEZxHtE74H41VrTuThHtncd8dzoYfPYj4nTqE7U0fDOjOM80VG8H18q02jzGMYb92jge1PHUwqSd5YHe+tQ2Sb0rVrnGcb/Zz1x1J9K0pVq0sWhlVgE7wbjz/nSm7VFpG2NHHgZHP0qN0jJ5jngDpVqzU0cPMB40VRuxZvHk/5FZpZN9yRkjQpAI9ayvU0dAKayvU01GgHtRnIqTzj8MU9BXVUdf9/4AAqgDI9RUpaAOb2l4vOnjj4jFQxAPWx3OD6VGR+1FaTSnduP41HFz6UpNO1JbOWrFxcRRlQ4YbXHXtU+k1cV1JQplcMlO2Kx8ZK7+J9aS0FWKiY7hcNdSSobacbsRXlT60oYxJcWGz3+QmrzvJH3kUc0NUfONC0pCTFFd7hmh9RiiieoZgH/9k=" alt="Gambar">
     <p class="bold-text">Ini adalah teks yang diformat menjadi tebal (bold) dan memiliki gradient warna yang bergerak.</p>
 </body>
 </html>
